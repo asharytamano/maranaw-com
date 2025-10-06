@@ -1,0 +1,153 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Merriweather:wght@400;700&display=swap');
+
+/* Body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+}
+
+.header-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Amiri', serif;
+}
+
+.main-nav {
+    display: flex;
+    gap: 40px;
+}
+
+.main-nav a {
+    color: #39ff14;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    color: #ccc;
+}
+
+/* Horizontal rule under header */
+hr {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin: 0;
+}
+
+/* Main content */
+.site-content {
+    max-width: 1000px;
+    width: 100%;
+    margin: 40px auto; /* center horizontally and vertical spacing */
+    padding: 0 20px;
+    text-align: center;
+}
+
+.site-content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.site-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.browse-surahs {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.browse-surahs:hover {
+    background-color: #777;
+}
+
+/* Footer */
+.site-footer {
+    max-width: 1000px;
+    width: 100%;
+    margin: 40px auto 20px auto;
+    padding: 15px 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+    color: #333;
+}
+
+.surah-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.surah-table td {
+    vertical-align: top;
+}
+
+.surah-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.surah-link:hover {
+    color: #333;
+}
+
+/* --- About Page Enhancements --- */
+.site-content h1 {
+    font-size: 32px;
+    text-align: center;
+    margin: 40px 0 30px 0;
+    font-weight: bold;
+}
+
+.site-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.site-content strong {
+    font-weight: bold;
+    color: #000;
+}
+
+/* NAV MENU FONT OVERRIDE - ALL PAGES */
+header .main-nav a {
+    font-family: 'Merriweather', serif !important; /* ensures all pages use this font */
+    font-size: 16px !important;                     /* consistent size across pages */
+    font-weight: bold !important;
+    color: #fff !important;                          /* matches black header bg */
+    text-decoration: none !important;
+    margin-left: 20px !important;                   /* spacing between links */
+}
+
+header .main-nav a:hover {
+    color: #ccc !important;                         /* subtle hover effect */
+}

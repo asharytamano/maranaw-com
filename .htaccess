@@ -1,0 +1,30 @@
+# Enable mod_rewrite
+RewriteEngine On
+
+# Default index page
+DirectoryIndex index.php
+
+# Prevent directory listing
+Options -Indexes
+
+# Redirect www to non-www (optional)
+# RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+# RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+# Pretty URLs for Surahs: /surah/2  → surah.php?surah=2
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^surah/([0-9]+)/?$ surah.php?surah=$1 [L,QSA]
+
+# Pretty URLs for pages: /home → home.php, /about → about.php, etc.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.php [L,QSA]
+
+# Optional: Hide .php extensions entirely
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME}\.php -f
+# RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.php [L,QSA]
+
+# Custom 404 page (optional)
+# ErrorDocument 404 /404.php

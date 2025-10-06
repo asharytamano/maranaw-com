@@ -1,0 +1,8 @@
+# Sensitive and system files
+.env
+config.php
+*.log
+api/*.log
+vendor/
+node_modules/
+.DS_Store

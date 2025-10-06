@@ -1,0 +1,266 @@
+/* surah.css */
+
+/* General styles */
+.surah-title { text-align: center; margin: 30px 0; font-size: 28px; }
+.arabic { font-family: 'Amiri', serif; font-size: 28px; }
+.quran-text { font-family: 'Amiri', serif; font-size: 22px; color: #000; display: block; margin-bottom: 8px; }
+.ayah-number { font-family: 'Amiri', serif; font-size: 18px; margin-left: 5px; }
+.translation { font-family: 'Merriweather', serif; font-size: 18px; margin-top: 8px; color: #D20103; display: block; font-weight: bold; }
+.tafsir { font-family: 'Merriweather', serif; font-size: 18px; margin-top: 8px; display:none; color: #555; text-align: justify; }
+
+/* Pagination */
+.pagination { max-width: 800px; margin: 20px auto; text-align: center; }
+.pagination a, .pagination strong { margin: 0 5px; padding: 5px 10px; background-color: #000; color: #fff; text-decoration: none; border-radius: 3px; }
+.pagination a:hover { background-color: #444; }
+
+/* Toggle buttons */
+.toggle-group { text-align: center; margin: 20px 0; }
+.toggle-group button {
+    margin: 0 5px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s all;
+}
+.toggle-group button.active {
+    background: linear-gradient(135deg, #D20103, #FF4D4D);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.toggle-group button:not(.active) {
+    background: linear-gradient(135deg, #f2f2f2, #ddd);
+    color: #000;
+}
+.toggle-group button:hover {
+    transform: scale(1.08);
+    background: linear-gradient(135deg, #FF4D4D, #FF7A7A);
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+/* Ayah blocks */
+.ayah-block {
+    max-width: 800px;
+    margin: 15px auto;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s all;
+}
+.ayah-block:nth-child(odd) { background-color: #fff7f7; }
+.ayah-block:nth-child(even) { background-color: #f9f9f9; }
+.ayah-block:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Highlight while playing */
+.playing {
+    border: 2px solid #D20103;
+    background-color: #fff0f0 !important;
+}
+
+/* Audio controls */
+.ayah-actions {
+    margin-top: 6px;
+    text-align: center;
+}
+.ayah-actions button, .ayah-actions input[type=range] {
+    margin: 4px;
+    padding: 4px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.ayah-actions input[type=range] {
+    vertical-align: middle;
+}
+
+/* Elegant progress bar */
+.ayah-actions input[type=range] {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 6px;
+    border-radius: 4px;
+    background: linear-gradient(to right, #D20103, #FF7A7A);
+    outline: none;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+.ayah-actions input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #D20103;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+}
+.ayah-actions input[type=range]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+.ayah-actions input[type=range]::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #D20103;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+}
+.ayah-actions input[type=range]::-moz-range-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* Share links */
+.share-links { margin-top: 6px; font-size: 14px; }
+.share-links a { margin-right: 8px; text-decoration: none; color: #0066cc; }
+
+/* Sticky controls */
+.sticky-controls {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    padding: 10px;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Toggle Switch (Auto-scroll & Continuous Play) */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #D20103;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Time display beside progress bar */
+.time-display {
+  font-size: 13px;
+  margin-left: 6px;
+  color: #444;
+  font-family: monospace;
+}
+
+/* Toggle row layout */
+.toggles-row {
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* space between toggles */
+}
+
+.toggle-label {
+  margin-left: 6px;
+  font-weight: bold;
+}
+
+/* ---------- Quran Arabic Text Styling ---------- */
+.quran-text {
+    font-family: 'Amiri', serif;
+    font-size: 32px;      /* increase size for readability */
+    line-height: 1.8;     /* extra spacing for clarity */
+    text-align: right;    /* keep Arabic aligned properly */
+    direction: rtl;       /* ensure right-to-left layout */
+    letter-spacing: 0.5px; /* slight tracking for clarity */
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 600px) {
+  .quran-text {
+    font-size: 24px;     /* slightly smaller on mobile */
+    letter-spacing: 0.3px; /* lighter spacing for smaller screens */
+  }
+}
+
+/* ---------- Dark Mode ---------- */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .site-content {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+body.dark-mode .quran-text {
+  color: #f5f5f5;
+}
+
+body.dark-mode .translation {
+  color: #d0d0d0;
+}
+
+body.dark-mode .tafsir {
+  background-color: #2a2a2a;
+  color: #dcdcdc;
+  border-left: 4px solid #444;
+  padding: 8px;
+}
+
+body.dark-mode a {
+  color: #80cbc4;
+}
+
+/* Centered Bismillah */
+.bismillah-block .quran-text {
+    font-family: 'Amiri', serif;   /* mushaf-like font */
+    text-align: center;            /* center aligned */
+    direction: rtl;                /* keep RTL rendering */
+    font-size: 34px;               /* slightly larger than ayah font */
+    margin: 20px 0;                /* spacing top & bottom */
+    letter-spacing: 0.5px;         /* optional elegance */
+    word-spacing: 4px;             /* calligraphy feel */
+    color: #2c7a7b;                /* elegant green tone */
+    transition: color 0.5s ease, transform 0.5s ease;
+}
+
+/* Hover effect */
+.bismillah-block .quran-text:hover {
+    color: #d4af37;    /* gold tone */
+    transform: scale(1.05); /* slight zoom for emphasis */
+}
+
+
