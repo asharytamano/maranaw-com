@@ -1,5 +1,7 @@
 # ROADMAP — MARANAO DIGITAL ECOSYSTEM
 
+![Maranao Digital Ecosystem Map](assets/images/ecosystem/maranao-digital-ecosystem-map.png)
+
 *A coordinated, multi-phase plan to preserve, empower, and globalize Maranao culture, faith, literature, and governance through digital technology.*
 
 ---
