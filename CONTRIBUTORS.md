@@ -112,4 +112,10 @@ IT Specialist • Cultural Researcher • Faith-based Technologist
 
 This is more than a project.
 
-It is the digital heartbeat of a people whose stories deserve to l
+It is the digital heartbeat of a people whose stories deserve to live forever.
+
+If you feel called to help, you are already one of us.
+
+**Maranao is not just a culture.  
+It is a legacy.  
+And now — it is becoming code.**
