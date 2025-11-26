@@ -78,7 +78,7 @@ To formally become a contributor, send the following:
 
 Send to:
 
-📧 **[ashary@yahoo.com]**
+📧 **ashary@yahoo.com**
 
 Subject:  
 **“Contributing to the Maranao Digital Ecosystem”**
